@@ -1,0 +1,5 @@
+.DS_Store
+
+.bpm/*
+output/*
+assets/bpm_*

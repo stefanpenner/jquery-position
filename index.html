@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+  <head>
+    <style>
+      html,body{ height: 100% }
+      #parent{
+        width: 100px;
+        height: 100px;
+        background: red;
+        margin: 0 auto;
+        top: 50%;
+        position: relative;
+      }
+
+      #child {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        background: blue;
+      }
+      #newParent{
+        width: 100px;
+        height: 100px;
+        background: orange;
+        margin: 0 auto;
+        top: 10px;
+        position: relative;
+      }
+
+      #newChild {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        background: yellow;
+      }
+      </style>
+    <script src="http://code.jquery.com/jquery-1.7.2.js"></script>
+    <script src="output/jquery-position.js"></script>
+    <script>
+      $(function(){
+        $('#parent').positionRelative('#child');
+      });
+    </script>
+  </head>
+  <body>
+    <div id="parent">
+    </div>
+
+    <div id="child">
+    </div>
+
+    <div id="newParent">
+    </div>
+
+    <div id="newChild" data-position-relative-to="#newParent" data-top='-30' data-left='-30'>
+    </div>
+  </body>
+</html>
+
