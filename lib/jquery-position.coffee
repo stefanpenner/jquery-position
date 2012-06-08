@@ -55,8 +55,6 @@
     child = child or this.data('position-relative')
     new RelativePositioning(this,child,opts).position()
 
-  $.fn.exoPositionRelative = $.fn.positionRelative
-
   $ ->
     $('[data-position-relative-to]').positionRelativeTo()
     $('[data-position-relative]').positionRelative()
